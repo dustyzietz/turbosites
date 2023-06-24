@@ -1,0 +1,14 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"height": {
+				"__TYPE__": "FieldContent",
+				"value": "18",
+				"type": "Number"
+			}
+		},
+		"items": []
+	}
+]

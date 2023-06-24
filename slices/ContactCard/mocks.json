@@ -1,0 +1,124 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+								"width": 4000,
+								"height": 6000
+							},
+							"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+							"width": 4000,
+							"height": 6000,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Id eiusmod elit duis sunt voluptate ea fugiat adipisicing quis. Sunt eu consectetur in sint sunt culpa minim eiusmod voluptate labore. Et in ad pariatur culpa anim elit voluptate officia cillum labore."
+									}
+								}
+							]
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Sint consequat id exercitation ullamco ut. Esse ipsum incididunt cillum aliqua velit deserunt veniam nisi Lorem nisi laboris. Eu tempor amet laboris anim."
+									}
+								}
+							]
+						}
+					],
+					[
+						"badge",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Sit veniam nulla exercitation. Ullamco aliqua nulla sint sunt fugiat dolore fugiat voluptate."
+									}
+								}
+							]
+						}
+					],
+					[
+						"icon_one",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "2",
+							"type": "Select"
+						}
+					],
+					[
+						"icon_text_one",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Duis incididunt id sit veniam anim amet fugiat occaecat minim ea aliquip ut sunt."
+									}
+								}
+							]
+						}
+					],
+					[
+						"icon_two",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "2",
+							"type": "Select"
+						}
+					],
+					[
+						"icon_text_two",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Dolor pariatur commodo irure et tempor. Amet sit sit culpa Lorem ullamco reprehenderit nostrud qui ea elit adipisicing deserunt reprehenderit id officia. Exercitation officia Lorem ea dolor incididunt duis nostrud sunt."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

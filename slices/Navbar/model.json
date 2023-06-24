@@ -1,0 +1,32 @@
+{
+  "id": "navbar",
+  "type": "SharedSlice",
+  "name": "Navbar",
+  "description": "Navbar",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "default_user_image": {
+          "type": "Image",
+          "config": {
+            "label": "Default User Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "link": {
+          "type": "Link",
+          "config": { "label": "Link", "placeholder": "", "select": null }
+        }
+      }
+    }
+  ]
+}
