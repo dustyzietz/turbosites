@@ -222,7 +222,9 @@ type PageDocumentDataSlicesSlice =
   | ContactCardSlice
   | TableSlice
   | ImageGallerySlice
-  | CardGridSlice;
+  | CardGridSlice
+  | HeroSlice
+  | RichTextSlice;
 /**
  * Page document from Prismic
  *
@@ -709,6 +711,27 @@ export type HeaderSlice = prismic.SharedSlice<"header", HeaderSliceVariation>;
  *
  */
 interface HeroSliceDefaultPrimary {
+  /**
+   * Overlay field in *Hero → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: text
+   * - **API ID Path**: hero.primary.overlay
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   *
+   */
+  overlay: prismic.SelectField<"text" | "image" | "none", "filled">;
+  /**
+   * Relationship field in *Hero → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.relationship
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  relationship: prismic.ContentRelationshipField<"page" | "post">;
   /**
    * Title field in *Hero → Primary*
    *

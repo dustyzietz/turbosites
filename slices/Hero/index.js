@@ -5,7 +5,7 @@ import Image from "next/image";
  * @param {HeroProps}
  */
 const Hero = ({ slice }) => {
- 
+ console.log(slice)
   // options: text-overlay image-overlay
   const imageOverlay = false;
   const textOverlay = true;
@@ -15,7 +15,7 @@ const Hero = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="relative"
     >
-      <div
+      {/* <div
         className={`absolute right-0 left-0 top-0 bottom-0 text-white flex justify-center align-center flex-col text-center ${
           imageOverlay ? "bg-opacity-60 bg-black " : ""
         }`}
@@ -37,7 +37,7 @@ const Hero = ({ slice }) => {
         src={slice.primary.image.url}
         alt=""
         priority
-      />
+      /> */}
     </section>
   );
 };

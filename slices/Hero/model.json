@@ -12,6 +12,23 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "overlay": {
+          "type": "Select",
+          "config": {
+            "label": "Overlay",
+            "placeholder": "",
+            "options": ["text", "image", "none"],
+            "default_value": "text"
+          }
+        },
+        "relationship": {
+          "type": "Link",
+          "config": {
+            "label": "Relationship",
+            "select": "document",
+            "customtypes": ["page", "post"]
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {

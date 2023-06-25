@@ -64,7 +64,9 @@
             "contact_card": { "type": "SharedSlice" },
             "table": { "type": "SharedSlice" },
             "image_gallery": { "type": "SharedSlice" },
-            "card_grid": { "type": "SharedSlice" }
+            "card_grid": { "type": "SharedSlice" },
+            "hero": { "type": "SharedSlice" },
+            "rich_text": { "type": "SharedSlice" }
           }
         }
       }

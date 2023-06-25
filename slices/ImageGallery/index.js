@@ -2,16 +2,6 @@ import { nanoid } from 'nanoid'
 import { createClient } from "@prismicio/client";
 import * as prismic from "@prismicio/client";
 
-const items = [
-  {
-    title: 'IMG_4985.HEIC',
-    size: '3.9 MB',
-    source:
-      'https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80',
-  },
-  // More items...
-]
-
 export default async function Example({slice}) {
   const { primary } = slice;
   let items = slice.items;
@@ -22,7 +12,6 @@ export default async function Example({slice}) {
     });
     items = fetchedCards.results.map((card) => ({...card.data, uid:card.uid, type:card.type}));
   }
-  console.log(items);
   return (
     <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8  m-8 xl:max-w-6xl xl:mx-auto">
       {items.map((item) => (
