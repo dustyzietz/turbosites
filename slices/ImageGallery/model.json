@@ -23,7 +23,11 @@
         },
         "tag": {
           "type": "Link",
-          "config": { "label": "tag", "select": "document" }
+          "config": {
+            "label": "tag",
+            "select": "document",
+            "customtypes": ["page_tag", "post_tag"]
+          }
         }
       },
       "items": {

@@ -801,7 +801,7 @@ interface ImageGallerySliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
    *
    */
-  tag: prismic.ContentRelationshipField;
+  tag: prismic.ContentRelationshipField<"page_tag" | "post_tag">;
 }
 /**
  * Item in ImageGallery → Items
