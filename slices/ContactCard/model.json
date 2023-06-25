@@ -11,7 +11,16 @@
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
-      "primary": {},
+      "primary": {
+        "tag": {
+          "type": "Link",
+          "config": {
+            "label": "tag",
+            "select": "document",
+            "customtypes": ["page_tag", "post_tag"]
+          }
+        }
+      },
       "items": {
         "image": {
           "type": "Image",

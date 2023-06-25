@@ -3,6 +3,7 @@
   "label": "Navigation",
   "repeatable": false,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "links": {
@@ -12,7 +13,11 @@
           "fields": {
             "link": {
               "type": "Link",
-              "config": { "label": "Link", "placeholder": "", "select": null }
+              "config": {
+                "label": "link",
+                "select": "document",
+                "customtypes": ["page", "homepage"]
+              }
             }
           }
         }

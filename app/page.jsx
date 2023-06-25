@@ -7,6 +7,7 @@ export default async function Home() {
   const client = createClient();
 
   const page = await client.getSingle("homepage");
+  
   return (
     <>
     <Header />

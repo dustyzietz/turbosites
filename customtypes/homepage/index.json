@@ -3,6 +3,7 @@
   "label": "Homepage",
   "repeatable": false,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "title": {
@@ -30,7 +31,9 @@
             "calendar": { "type": "SharedSlice" },
             "table": { "type": "SharedSlice" },
             "spacer": { "type": "SharedSlice" },
-            "hero": { "type": "SharedSlice" }
+            "hero": { "type": "SharedSlice" },
+            "header": { "type": "SharedSlice" },
+            "rich_text": { "type": "SharedSlice" }
           }
         }
       }

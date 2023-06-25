@@ -2,52 +2,60 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"tag": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			}
+		},
 		"items": [
 			{
 				"__TYPE__": "GroupItemContent",
 				"value": [
 					[
-						"card_title",
+						"title",
 						{
 							"__TYPE__": "StructuredTextContent",
 							"value": [
 								{
 									"type": "paragraph",
 									"content": {
-										"text": "Qui eiusmod est ut veniam reprehenderit ea do est ullamco eu sunt aliqua ex. Laboris et ut commodo excepteur est laborum occaecat elit officia cupidatat nostrud labore ut."
+										"text": "Enim magna est occaecat ea deserunt dolore et pariatur enim laboris dolore velit irure officia laboris."
 									}
 								}
 							]
 						}
 					],
 					[
-						"card_description",
+						"description",
 						{
 							"__TYPE__": "StructuredTextContent",
 							"value": [
 								{
 									"type": "paragraph",
 									"content": {
-										"text": "Aute nulla pariatur enim proident laborum enim sint officia consectetur exercitation quis mollit. Qui proident ullamco aliqua minim cillum aute ad. Laboris occaecat occaecat fugiat dolore deserunt laborum duis culpa ea do."
+										"text": "Ea ea ipsum nostrud ad sint fugiat occaecat dolore dolor dolore reprehenderit sit esse laboris. Enim aute consequat exercitation minim labore dolor Lorem sint enim esse laborum."
 									}
 								}
 							]
 						}
 					],
 					[
-						"card_image",
+						"image",
 						{
 							"__TYPE__": "ImageContent",
 							"origin": {
 								"id": "main",
-								"url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
-								"width": 3212,
-								"height": 3880
+								"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+								"width": 4000,
+								"height": 4000
 							},
-							"url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
-							"width": 3212,
-							"height": 3880,
+							"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+							"width": 4000,
+							"height": 4000,
 							"edit": {
 								"zoom": 1,
 								"crop": {

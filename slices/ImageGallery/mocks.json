@@ -13,6 +13,13 @@
 						}
 					}
 				]
+			},
+			"tag": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
 			}
 		},
 		"items": [
@@ -46,28 +53,28 @@
 						}
 					],
 					[
-						"image_title",
+						"title",
 						{
 							"__TYPE__": "StructuredTextContent",
 							"value": [
 								{
 									"type": "paragraph",
 									"content": {
-										"text": "Ipsum aliquip officia nisi et."
+										"text": "Est laborum consectetur cupidatat eu."
 									}
 								}
 							]
 						}
 					],
 					[
-						"image_details",
+						"description",
 						{
 							"__TYPE__": "StructuredTextContent",
 							"value": [
 								{
 									"type": "paragraph",
 									"content": {
-										"text": "Proident esse officia ea proident ad sunt culpa. Irure ea nostrud ut cillum."
+										"text": "Incididunt cillum id duis mollit."
 									}
 								}
 							]
