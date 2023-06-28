@@ -19,7 +19,7 @@ const page = () => {
     <div>
       <h1>Component List</h1>
       <div className="m-8">
-        <Avatar />
+        <Avatar size={6} />
       </div>
       <div className="m-8">
         <Checkboxes />
@@ -40,13 +40,13 @@ const page = () => {
         <Textarea />
       </div>
       <div className="m-8">
-        <Badge />
+        <Badge text={"xl"} hasX={"yes"}/>
       </div>
       <div className="m-8">
-        <Button />
+        <Button color= "green" />
       </div>
       <div className="m-8">
-        <CircularButton />
+        <CircularButton color={"red"} icon="minus"/>
       </div>
       <div className="m-8">
         <Dropdown />
