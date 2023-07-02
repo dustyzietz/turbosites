@@ -6,12 +6,14 @@ import * as prismic from "@prismicio/client";
 export default async function Example({slice}) {
   const { primary } = slice;
   let items = slice.items;
+  let type = "page";
   if (primary.tag.id) {
     const client = createClient("https://turbosites.cdn.prismic.io/api/v2");
+    if(primary.tag.type === "post_tag")type = "post";
     const fetchedCards = await client.get({
-      filters: [prismic.filter.at("my.page.related_tags.tag", primary.tag.id)],
+      filters: [prismic.filter.at(`my.${type}.related_tags.tag`, primary.tag.id)],
     });
-    items = fetchedCards.results.map((card) => ({...card.data, uid:card.uid, type:card.type}));
+    items = fetchedCards.results.map((card) => ({...card.data, uid: card.uid, type: card.type}));
   }
 
   return (

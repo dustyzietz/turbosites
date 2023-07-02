@@ -5,12 +5,14 @@ import * as prismic from "@prismicio/client";
 export default async function Example({ slice }) {
   const { primary } = slice;
   let items = slice.items;
+  let type = "page";
   if (primary.tag.id) {
     const client = createClient("https://turbosites.cdn.prismic.io/api/v2");
+    if(primary.tag.type === "post_tag")type = "post";
     const fetchedCards = await client.get({
-      filters: [prismic.filter.at("my.page.related_tags.tag", primary.tag.id)],
+      filters: [prismic.filter.at(`my.${type}.related_tags.tag`, primary.tag.id)],
     });
-    items = fetchedCards.results.map((card) => card.data);
+    items = fetchedCards.results.map((card) => ({...card.data, uid: card.uid}));
   }
 
   return (
@@ -28,7 +30,7 @@ export default async function Example({ slice }) {
             />
           </div>
           <div className="min-w-0 flex-1">
-            <a href="#" className="focus:outline-none">
+            <a href={`/${type === 'post' ? 'blog/' : ''}${item.uid}`} className="focus:outline-none">
               <span className="absolute inset-0" aria-hidden="true" />
               <p className="text-sm font-medium text-gray-900">
                 {item.title?.[0]?.text}

@@ -40,7 +40,7 @@ const page = () => {
         <Textarea />
       </div>
       <div className="m-8">
-        <Badge text={"xl"} hasX={"yes"}/>
+        <Badge text={"xl"} hasX={true}/>
       </div>
       <div className="m-8">
         <Button color= "green" />

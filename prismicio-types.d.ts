@@ -334,33 +334,59 @@ interface PostDocumentData {
    */
   subtitle: prismic.RichTextField;
   /**
-   * Tags field in *Post*
+   * Related Tags field in *Post*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: post.tags[]
+   * - **API ID Path**: post.related_tags[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/group
    *
    */
-  tags: prismic.GroupField<Simplify<PostDocumentDataTagsItem>>;
+  related_tags: prismic.GroupField<Simplify<PostDocumentDataRelatedTagsItem>>;
+  /**
+   * Slice Zone field in *Post*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismic.SliceZone<PostDocumentDataSlicesSlice>;
 }
 /**
- * Item in Post → Tags
+ * Item in Post → Related Tags
  *
  */
-export interface PostDocumentDataTagsItem {
+export interface PostDocumentDataRelatedTagsItem {
   /**
-   * Tag field in *Post → Tags*
+   * Tag field in *Post → Related Tags*
    *
    * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **API ID Path**: post.tags[].tag
+   * - **API ID Path**: post.related_tags[].tag
    * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
    *
    */
   tag: prismic.ContentRelationshipField<"post_tag">;
 }
+/**
+ * Slice for *Post → Slice Zone*
+ *
+ */
+type PostDocumentDataSlicesSlice =
+  | ContactCardSlice
+  | CardGridSlice
+  | CalendarSlice
+  | HeroSlice
+  | ImageGallerySlice
+  | RichTextSlice
+  | NavbarSlice
+  | SpacerSlice
+  | TableSlice
+  | HeaderSlice;
 /**
  * Post document from Prismic
  *
@@ -1100,7 +1126,8 @@ declare module "@prismicio/client" {
       PageTagDocumentData,
       PageTagDocument,
       PostDocumentData,
-      PostDocumentDataTagsItem,
+      PostDocumentDataRelatedTagsItem,
+      PostDocumentDataSlicesSlice,
       PostDocument,
       PostTagDocumentData,
       PostTagDocument,
