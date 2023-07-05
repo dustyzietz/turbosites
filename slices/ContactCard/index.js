@@ -2,6 +2,7 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/20/solid'
 import { nanoid } from 'nanoid'
 import { createClient } from "@prismicio/client";
 import * as prismic from "@prismicio/client";
+import Image from 'next/image';
 
 export default async function Example({slice}) {
   const { primary } = slice;
@@ -23,7 +24,7 @@ export default async function Example({slice}) {
           className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
         >
           <div className="flex flex-1 flex-col p-8 px-4">
-            <img className="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src={item.image.url} alt="" />
+            <Image width={100} height={100} quality={100} className="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src={item.image.url} alt="" />
             <h3 className="mt-6 text-sm font-medium text-gray-900">{item.title?.[0].text}</h3>
             <dl className="mt-1 flex flex-grow flex-col justify-between">
               <dt className="sr-only">Title</dt>

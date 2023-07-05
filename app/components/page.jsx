@@ -40,13 +40,13 @@ const page = () => {
         <Textarea />
       </div>
       <div className="m-8">
-        <Badge text={"xl"} hasX={"yes"}/>
+        <Badge color={"green"} text={"Testing"} hasX={"true"}/>
       </div>
       <div className="m-8">
-        <Button color= "green" />
+        <Button sizeX={2.5} sizeY={1.5} color= {"red"} />
       </div>
       <div className="m-8">
-        <CircularButton color={"red"} icon="minus"/>
+        <CircularButton size={10} color="green" icon="minus"/>
       </div>
       <div className="m-8">
         <Dropdown />

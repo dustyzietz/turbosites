@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid'
 import { createClient } from "@prismicio/client";
 import * as prismic from "@prismicio/client";
+import Image from 'next/image';
 
 export default async function Example({slice}) {
   const { primary } = slice;
@@ -17,7 +18,7 @@ export default async function Example({slice}) {
       {items.map((item) => (
         <li  key={nanoid()} className="relative">
           <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-            <img src={item.image.url} alt="" className="pointer-events-none object-cover group-hover:opacity-75" />
+            <Image width={260} height={184} quality={75} src={item.image.url} alt="" className="pointer-events-none object-cover group-hover:opacity-75" />
             <button type="button" className="absolute inset-0 focus:outline-none">
               <span className="sr-only">View details for {item.title[0].text}</span>
             </button>
