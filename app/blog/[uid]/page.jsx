@@ -1,13 +1,15 @@
 import { createClient } from "@/prismicio";
-import Header from "../components/Header";
+import Header from "@/app/components/Header";
 import { SliceZone } from "@prismicio/react";
 import { components } from "@/slices";
 
 export default async function Page({ params }) {
   const client = createClient();
 
-  const page = params.uid !== "components" ? await client.getByUID("page", params.uid) : null;
-  
+  const page =
+    params.uid !== "components"
+      ? await client.getByUID("post", params.uid)
+      : null;
   const { slices } = page.data;
   for (let i = 0; i < slices.length; i++) {
     if (slices[i].slice_type === "hero" && slices[i].primary.relationship?.id) {
@@ -29,11 +31,10 @@ export default async function Page({ params }) {
       };
     }
   }
-
   return (
     <>
-    <Header />
-    <SliceZone slices={page.data.slices} components={components} />
+      <Header />
+      <SliceZone slices={page.data.slices} components={components} />
     </>
-  )
+  );
 }

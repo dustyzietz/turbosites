@@ -6,12 +6,14 @@ import Image from 'next/image';
 export default async function Example({slice}) {
   const { primary } = slice;
   let items = slice.items;
+  let type = "page";
   if (primary.tag.id) {
     const client = createClient("https://turbosites.cdn.prismic.io/api/v2");
+    if(primary.tag.type === "post_tag")type = "post";
     const fetchedCards = await client.get({
-      filters: [prismic.filter.at("my.page.related_tags.tag", primary.tag.id)],
+      filters: [prismic.filter.at(`my.${type}.related_tags.tag`, primary.tag.id)],
     });
-    items = fetchedCards.results.map((card) => ({...card.data, uid:card.uid, type:card.type}));
+    items = fetchedCards.results.map((card) => ({...card.data, uid: card.uid}));
   }
   return (
     <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8  m-8 xl:max-w-6xl xl:mx-auto">

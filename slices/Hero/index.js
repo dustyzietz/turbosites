@@ -5,7 +5,7 @@ import Image from "next/image";
  * @param {HeroProps}
  */
 const Hero = ({ slice }) => {
- console.log(slice)
+ 
   // options: text-overlay image-overlay
   const imageOverlay = false;
   const textOverlay = true;
@@ -15,7 +15,7 @@ const Hero = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="relative"
     >
-      {/* <div
+      <div
         className={`absolute right-0 left-0 top-0 bottom-0 text-white flex justify-center align-center flex-col text-center ${
           imageOverlay ? "bg-opacity-60 bg-black " : ""
         }`}
@@ -25,19 +25,20 @@ const Hero = ({ slice }) => {
             textOverlay ? " bg-opacity-70 bg-black " : ""
           }`}
         >
-          <h1 className="text-5xl mb-4">{slice.primary.title?.[0].text}</h1>
-          <h2 className="text-2xl mb-2">{slice.primary.subtitle?.[0].text}</h2>
-          <p className="text-lg">{slice.primary.description?.[0].text}</p>
+          <h1 className="text-3xl mb-4">{slice.primary?.title?.[0]?.text}</h1>
+          <h2 className="text-2xl mb-2">{slice.primary?.subtitle?.[0]?.text}</h2>
+          <p className="text-lg">{slice.primary?.description?.[0]?.text}</p>
         </div>
       </div>
       <Image
         height={800}
         width={1920}
         quality={80}
-        src={slice.primary.image.url}
+        src={slice.primary?.image?.url}
         alt=""
         priority
-      /> */}
+        className="max-h-96 w-full object-cover"
+      />
     </section>
   );
 };

@@ -7,15 +7,17 @@ import { PrismicRichText } from "@prismicio/react";
  */
 const Header = ({ slice }) => {
   const { title, alignment} = slice.primary;
+ 
   const alignmentClass = () => {
-    if (alignment === "center") {
-      return "text-center";
+    if (alignment === "left") {
+      return "text-left";
     } else if (alignment === "right") {
       return "text-right";
     }else {
-      return "text-left";
+      return "text-center";
     }
   }
+
  
   return (
     <section
